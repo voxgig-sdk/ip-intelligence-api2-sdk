@@ -1,0 +1,67 @@
+<?php
+declare(strict_types=1);
+
+// IpIntelligenceApi2 SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+IpIntelligenceApi2Utility::setRegistrar(function (IpIntelligenceApi2Utility $u): void {
+    $u->clean = [IpIntelligenceApi2Clean::class, 'call'];
+    $u->done = [IpIntelligenceApi2Done::class, 'call'];
+    $u->make_error = [IpIntelligenceApi2MakeError::class, 'call'];
+    $u->feature_add = [IpIntelligenceApi2FeatureAdd::class, 'call'];
+    $u->feature_hook = [IpIntelligenceApi2FeatureHook::class, 'call'];
+    $u->feature_init = [IpIntelligenceApi2FeatureInit::class, 'call'];
+    $u->fetcher = [IpIntelligenceApi2Fetcher::class, 'call'];
+    $u->make_fetch_def = [IpIntelligenceApi2MakeFetchDef::class, 'call'];
+    $u->make_context = [IpIntelligenceApi2MakeContext::class, 'call'];
+    $u->make_options = [IpIntelligenceApi2MakeOptions::class, 'call'];
+    $u->make_request = [IpIntelligenceApi2MakeRequest::class, 'call'];
+    $u->make_response = [IpIntelligenceApi2MakeResponse::class, 'call'];
+    $u->make_result = [IpIntelligenceApi2MakeResult::class, 'call'];
+    $u->make_point = [IpIntelligenceApi2MakePoint::class, 'call'];
+    $u->make_spec = [IpIntelligenceApi2MakeSpec::class, 'call'];
+    $u->make_url = [IpIntelligenceApi2MakeUrl::class, 'call'];
+    $u->param = [IpIntelligenceApi2Param::class, 'call'];
+    $u->prepare_auth = [IpIntelligenceApi2PrepareAuth::class, 'call'];
+    $u->prepare_body = [IpIntelligenceApi2PrepareBody::class, 'call'];
+    $u->prepare_headers = [IpIntelligenceApi2PrepareHeaders::class, 'call'];
+    $u->prepare_method = [IpIntelligenceApi2PrepareMethod::class, 'call'];
+    $u->prepare_params = [IpIntelligenceApi2PrepareParams::class, 'call'];
+    $u->prepare_path = [IpIntelligenceApi2PreparePath::class, 'call'];
+    $u->prepare_query = [IpIntelligenceApi2PrepareQuery::class, 'call'];
+    $u->result_basic = [IpIntelligenceApi2ResultBasic::class, 'call'];
+    $u->result_body = [IpIntelligenceApi2ResultBody::class, 'call'];
+    $u->result_headers = [IpIntelligenceApi2ResultHeaders::class, 'call'];
+    $u->transform_request = [IpIntelligenceApi2TransformRequest::class, 'call'];
+    $u->transform_response = [IpIntelligenceApi2TransformResponse::class, 'call'];
+});

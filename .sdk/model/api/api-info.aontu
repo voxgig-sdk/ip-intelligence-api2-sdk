@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://github.com/l0v3m0n3y/ipquery"
+      }
+      description: "IPQuery provides a straightforward API for IP intelligence, allowing developers to retrieve geolocation and other information based on IP addresses. It features a free tier and does not require an API key, making it easy to integrate into applications."
+      servers: [
+        {
+          description: "Production server"
+          url: "https://api.ipquery.io"
+        }
+      ]
+      summary: "IPQuery provides a straightforward API for IP intelligence, allowing developers to retrieve geolocation and other information based on IP addresses."
+      title: "IP Intelligence API"
+      version: "1.0.0"
+      website: "https://github.com/l0v3m0n3y/ipquery"
+    }
+  }
+}
+
