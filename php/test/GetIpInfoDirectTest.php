@@ -73,11 +73,11 @@ function get_ip_info_direct_setup($mockres)
     $calls = new \ArrayObject();
 
     $env = Runner::env_override([
-        "IPINTELLIGENCEAPI__TEST_GET_IP_INFO_ENTID" => [],
-        "IPINTELLIGENCEAPI__TEST_LIVE" => "FALSE",
+        "IP_INTELLIGENCE_API2_TEST_GET_IP_INFO_ENTID" => [],
+        "IP_INTELLIGENCE_API2_TEST_LIVE" => "FALSE",
     ]);
 
-    $live = $env["IPINTELLIGENCEAPI__TEST_LIVE"] === "TRUE";
+    $live = $env["IP_INTELLIGENCE_API2_TEST_LIVE"] === "TRUE";
 
     if ($live) {
         $merged_opts = [

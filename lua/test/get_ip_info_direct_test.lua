@@ -68,11 +68,11 @@ function get_ip_info_direct_setup(mockres)
   local calls = {}
 
   local env = runner.env_override({
-    ["IPINTELLIGENCEAPI__TEST_GET_IP_INFO_ENTID"] = {},
-    ["IPINTELLIGENCEAPI__TEST_LIVE"] = "FALSE",
+    ["IP_INTELLIGENCE_API2_TEST_GET_IP_INFO_ENTID"] = {},
+    ["IP_INTELLIGENCE_API2_TEST_LIVE"] = "FALSE",
   })
 
-  local live = env["IPINTELLIGENCEAPI__TEST_LIVE"] == "TRUE"
+  local live = env["IP_INTELLIGENCE_API2_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {

@@ -130,6 +130,7 @@ class IpIntelligenceApi2Config
                       ],
                     ],
                   ],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/{ip}',
                   'parts' => [

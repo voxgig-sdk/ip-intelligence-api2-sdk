@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from ipintelligenceapi2_sdk.utility.voxgig_struct import voxgig_struct as vs
 from ipintelligenceapi2_sdk import IpIntelligenceApi2SDK
-from core import helpers
+from ipintelligenceapi2_sdk.core import helpers
 from test import runner
 
 
@@ -63,11 +63,11 @@ def _get_ip_info_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "IPINTELLIGENCEAPI__TEST_GET_IP_INFO_ENTID": {},
-        "IPINTELLIGENCEAPI__TEST_LIVE": "FALSE",
+        "IP_INTELLIGENCE_API2_TEST_GET_IP_INFO_ENTID": {},
+        "IP_INTELLIGENCE_API2_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("IPINTELLIGENCEAPI__TEST_LIVE") == "TRUE"
+    live = env.get("IP_INTELLIGENCE_API2_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

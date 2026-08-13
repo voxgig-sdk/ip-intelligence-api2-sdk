@@ -16,11 +16,11 @@
 import pytest
 
 from projectname_sdk import IpIntelligenceApi2SDK
-from core.error import IpIntelligenceApi2Error
-from core.result import IpIntelligenceApi2Result
-from core.response import IpIntelligenceApi2Response
-from core.spec import IpIntelligenceApi2Spec
-from feature.base_feature import IpIntelligenceApi2BaseFeature
+from projectname_sdk.core.error import IpIntelligenceApi2Error
+from projectname_sdk.core.result import IpIntelligenceApi2Result
+from projectname_sdk.core.response import IpIntelligenceApi2Response
+from projectname_sdk.core.spec import IpIntelligenceApi2Spec
+from projectname_sdk.feature.base_feature import IpIntelligenceApi2BaseFeature
 
 
 def _client():

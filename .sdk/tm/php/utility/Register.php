@@ -23,6 +23,7 @@ require_once __DIR__ . '/MakeUrl.php';
 require_once __DIR__ . '/Param.php';
 require_once __DIR__ . '/PrepareAuth.php';
 require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
 require_once __DIR__ . '/PrepareHeaders.php';
 require_once __DIR__ . '/PrepareMethod.php';
 require_once __DIR__ . '/PrepareParams.php';
@@ -59,6 +60,8 @@ IpIntelligenceApi2Utility::setRegistrar(function (IpIntelligenceApi2Utility $u):
     $u->prepare_params = [IpIntelligenceApi2PrepareParams::class, 'call'];
     $u->prepare_path = [IpIntelligenceApi2PreparePath::class, 'call'];
     $u->prepare_query = [IpIntelligenceApi2PrepareQuery::class, 'call'];
+    $u->graphql_body = [IpIntelligenceApi2Graphql::class, 'body'];
+    $u->graphql_errors = [IpIntelligenceApi2Graphql::class, 'errors'];
     $u->result_basic = [IpIntelligenceApi2ResultBasic::class, 'call'];
     $u->result_body = [IpIntelligenceApi2ResultBody::class, 'call'];
     $u->result_headers = [IpIntelligenceApi2ResultHeaders::class, 'call'];
