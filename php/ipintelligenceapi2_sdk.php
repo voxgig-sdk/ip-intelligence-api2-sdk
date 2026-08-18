@@ -40,7 +40,7 @@ class IpIntelligenceApi2SDK
         $utility = new IpIntelligenceApi2Utility();
         $this->_utility = $utility;
 
-        $config = IpIntelligenceApi2Config::make_config();
+        $config = IpIntelligenceApi2Config::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

@@ -28,7 +28,7 @@ class IpIntelligenceApi2SDK
     utility = IpIntelligenceApi2Utility.new
     @_utility = utility
 
-    config = IpIntelligenceApi2Config.make_config
+    config = IpIntelligenceApi2Config.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,
