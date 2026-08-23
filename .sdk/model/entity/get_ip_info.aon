@@ -8,56 +8,67 @@ main: kit: entity: get_ip_info: {
     {
       name: "as"
       req: false
+      short: "Autonomous System information"
       type: "`$STRING`"
     }
     {
       name: "city"
       req: false
+      short: "City name"
       type: "`$STRING`"
     }
     {
       name: "country"
       req: false
+      short: "Country name"
       type: "`$STRING`"
     }
     {
       name: "country_code"
       req: false
+      short: "ISO 3166-1 alpha-2 country code"
       type: "`$STRING`"
     }
     {
       name: "ip"
       req: false
+      short: "The queried IP address"
       type: "`$STRING`"
     }
     {
       name: "isp"
       req: false
+      short: "Internet Service Provider"
       type: "`$STRING`"
     }
     {
       name: "latitude"
       req: false
+      short: "Geographical latitude"
       type: "`$NUMBER`"
     }
     {
       name: "longitude"
       req: false
+      short: "Geographical longitude"
       type: "`$NUMBER`"
     }
     {
       name: "org"
       req: false
+      short: "Organization name"
       type: "`$STRING`"
     }
     {
       name: "region"
       req: false
+      short: "Region or state name"
       type: "`$STRING`"
     }
     {
       name: "timezone"
       req: false
+      short: "Timezone identifier"
       type: "`$STRING`"
     }
   ]

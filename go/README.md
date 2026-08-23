@@ -6,7 +6,7 @@ The Golang SDK for the IpIntelligenceApi2 API — an entity-oriented client usin
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.GetIpInfo(nil)` — each with the same small set of operations (`Load`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -258,17 +258,17 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"as"` |  |
-| `"city"` |  |
-| `"country"` |  |
-| `"country_code"` |  |
-| `"ip"` |  |
-| `"isp"` |  |
-| `"latitude"` |  |
-| `"longitude"` |  |
-| `"org"` |  |
-| `"region"` |  |
-| `"timezone"` |  |
+| `"as"` | Autonomous System information |
+| `"city"` | City name |
+| `"country"` | Country name |
+| `"country_code"` | ISO 3166-1 alpha-2 country code |
+| `"ip"` | The queried IP address |
+| `"isp"` | Internet Service Provider |
+| `"latitude"` | Geographical latitude |
+| `"longitude"` | Geographical longitude |
+| `"org"` | Organization name |
+| `"region"` | Region or state name |
+| `"timezone"` | Timezone identifier |
 
 Operations: Load.
 
@@ -293,17 +293,17 @@ Create an instance: `getIpInfo := client.GetIpInfo(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `as` | `string` |  |
-| `city` | `string` |  |
-| `country` | `string` |  |
-| `country_code` | `string` |  |
-| `ip` | `string` |  |
-| `isp` | `string` |  |
-| `latitude` | `float64` |  |
-| `longitude` | `float64` |  |
-| `org` | `string` |  |
-| `region` | `string` |  |
-| `timezone` | `string` |  |
+| `as` | `string` | Autonomous System information |
+| `city` | `string` | City name |
+| `country` | `string` | Country name |
+| `country_code` | `string` | ISO 3166-1 alpha-2 country code |
+| `ip` | `string` | The queried IP address |
+| `isp` | `string` | Internet Service Provider |
+| `latitude` | `float64` | Geographical latitude |
+| `longitude` | `float64` | Geographical longitude |
+| `org` | `string` | Organization name |
+| `region` | `string` | Region or state name |
+| `timezone` | `string` | Timezone identifier |
 
 #### Example: Load
 

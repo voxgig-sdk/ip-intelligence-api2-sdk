@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -285,17 +285,17 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `as` |  |
-| `city` |  |
-| `country` |  |
-| `country_code` |  |
-| `ip` |  |
-| `isp` |  |
-| `latitude` |  |
-| `longitude` |  |
-| `org` |  |
-| `region` |  |
-| `timezone` |  |
+| `as` | Autonomous System information |
+| `city` | City name |
+| `country` | Country name |
+| `country_code` | ISO 3166-1 alpha-2 country code |
+| `ip` | The queried IP address |
+| `isp` | Internet Service Provider |
+| `latitude` | Geographical latitude |
+| `longitude` | Geographical longitude |
+| `org` | Organization name |
+| `region` | Region or state name |
+| `timezone` | Timezone identifier |
 
 Operations: load.
 
@@ -320,17 +320,17 @@ Create an instance: `const get_ip_info = client.GetIpInfo()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `as` | `string` |  |
-| `city` | `string` |  |
-| `country` | `string` |  |
-| `country_code` | `string` |  |
-| `ip` | `string` |  |
-| `isp` | `string` |  |
-| `latitude` | `number` |  |
-| `longitude` | `number` |  |
-| `org` | `string` |  |
-| `region` | `string` |  |
-| `timezone` | `string` |  |
+| `as` | `string` | Autonomous System information |
+| `city` | `string` | City name |
+| `country` | `string` | Country name |
+| `country_code` | `string` | ISO 3166-1 alpha-2 country code |
+| `ip` | `string` | The queried IP address |
+| `isp` | `string` | Internet Service Provider |
+| `latitude` | `number` | Geographical latitude |
+| `longitude` | `number` | Geographical longitude |
+| `org` | `string` | Organization name |
+| `region` | `string` | Region or state name |
+| `timezone` | `string` | Timezone identifier |
 
 #### Example: Load
 

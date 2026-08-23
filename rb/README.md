@@ -238,17 +238,17 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `as` |  |
-| `city` |  |
-| `country` |  |
-| `country_code` |  |
-| `ip` |  |
-| `isp` |  |
-| `latitude` |  |
-| `longitude` |  |
-| `org` |  |
-| `region` |  |
-| `timezone` |  |
+| `as` | Autonomous System information |
+| `city` | City name |
+| `country` | Country name |
+| `country_code` | ISO 3166-1 alpha-2 country code |
+| `ip` | The queried IP address |
+| `isp` | Internet Service Provider |
+| `latitude` | Geographical latitude |
+| `longitude` | Geographical longitude |
+| `org` | Organization name |
+| `region` | Region or state name |
+| `timezone` | Timezone identifier |
 
 Operations: Load.
 
@@ -273,17 +273,17 @@ Create an instance: `get_ip_info = client.GetIpInfo`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `as` | `String` |  |
-| `city` | `String` |  |
-| `country` | `String` |  |
-| `country_code` | `String` |  |
-| `ip` | `String` |  |
-| `isp` | `String` |  |
-| `latitude` | `Float` |  |
-| `longitude` | `Float` |  |
-| `org` | `String` |  |
-| `region` | `String` |  |
-| `timezone` | `String` |  |
+| `as` | `String` | Autonomous System information |
+| `city` | `String` | City name |
+| `country` | `String` | Country name |
+| `country_code` | `String` | ISO 3166-1 alpha-2 country code |
+| `ip` | `String` | The queried IP address |
+| `isp` | `String` | Internet Service Provider |
+| `latitude` | `Float` | Geographical latitude |
+| `longitude` | `Float` | Geographical longitude |
+| `org` | `String` | Organization name |
+| `region` | `String` | Region or state name |
+| `timezone` | `String` | Timezone identifier |
 
 #### Example: Load
 

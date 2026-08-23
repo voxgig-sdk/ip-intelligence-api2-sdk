@@ -93,17 +93,17 @@ get_ip_info = client.GetIpInfo
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `as` | `String` | No |  |
-| `city` | `String` | No |  |
-| `country` | `String` | No |  |
-| `country_code` | `String` | No |  |
-| `ip` | `String` | No |  |
-| `isp` | `String` | No |  |
-| `latitude` | `Float` | No |  |
-| `longitude` | `Float` | No |  |
-| `org` | `String` | No |  |
-| `region` | `String` | No |  |
-| `timezone` | `String` | No |  |
+| `as` | `String` | No | Autonomous System information |
+| `city` | `String` | No | City name |
+| `country` | `String` | No | Country name |
+| `country_code` | `String` | No | ISO 3166-1 alpha-2 country code |
+| `ip` | `String` | No | The queried IP address |
+| `isp` | `String` | No | Internet Service Provider |
+| `latitude` | `Float` | No | Geographical latitude |
+| `longitude` | `Float` | No | Geographical longitude |
+| `org` | `String` | No | Organization name |
+| `region` | `String` | No | Region or state name |
+| `timezone` | `String` | No | Timezone identifier |
 
 ### Operations
 

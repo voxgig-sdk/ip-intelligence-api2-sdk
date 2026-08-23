@@ -87,17 +87,17 @@ get_ip_info = client.GetIpInfo()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `as` | `str` | No |  |
-| `city` | `str` | No |  |
-| `country` | `str` | No |  |
-| `country_code` | `str` | No |  |
-| `ip` | `str` | No |  |
-| `isp` | `str` | No |  |
-| `latitude` | `float` | No |  |
-| `longitude` | `float` | No |  |
-| `org` | `str` | No |  |
-| `region` | `str` | No |  |
-| `timezone` | `str` | No |  |
+| `as` | `str` | No | Autonomous System information |
+| `city` | `str` | No | City name |
+| `country` | `str` | No | Country name |
+| `country_code` | `str` | No | ISO 3166-1 alpha-2 country code |
+| `ip` | `str` | No | The queried IP address |
+| `isp` | `str` | No | Internet Service Provider |
+| `latitude` | `float` | No | Geographical latitude |
+| `longitude` | `float` | No | Geographical longitude |
+| `org` | `str` | No | Organization name |
+| `region` | `str` | No | Region or state name |
+| `timezone` | `str` | No | Timezone identifier |
 
 ### Operations
 

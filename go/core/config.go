@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "IpIntelligenceApi2",
+			"slug": "ip-intelligence-api2",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -33,46 +36,57 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "as",
+						"short": "Autonomous System information",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "city",
+						"short": "City name",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "country",
+						"short": "Country name",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "country_code",
+						"short": "ISO 3166-1 alpha-2 country code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "ip",
+						"short": "The queried IP address",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "isp",
+						"short": "Internet Service Provider",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "latitude",
+						"short": "Geographical latitude",
 						"type": "`$NUMBER`",
 					},
 					map[string]any{
 						"name": "longitude",
+						"short": "Geographical longitude",
 						"type": "`$NUMBER`",
 					},
 					map[string]any{
 						"name": "org",
+						"short": "Organization name",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "region",
+						"short": "Region or state name",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "timezone",
+						"short": "Timezone identifier",
 						"type": "`$STRING`",
 					},
 				},

@@ -92,17 +92,17 @@ $get_ip_info = $client->GetIpInfo();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `as` | `string` | No |  |
-| `city` | `string` | No |  |
-| `country` | `string` | No |  |
-| `country_code` | `string` | No |  |
-| `ip` | `string` | No |  |
-| `isp` | `string` | No |  |
-| `latitude` | `float` | No |  |
-| `longitude` | `float` | No |  |
-| `org` | `string` | No |  |
-| `region` | `string` | No |  |
-| `timezone` | `string` | No |  |
+| `as` | `string` | No | Autonomous System information |
+| `city` | `string` | No | City name |
+| `country` | `string` | No | Country name |
+| `country_code` | `string` | No | ISO 3166-1 alpha-2 country code |
+| `ip` | `string` | No | The queried IP address |
+| `isp` | `string` | No | Internet Service Provider |
+| `latitude` | `float` | No | Geographical latitude |
+| `longitude` | `float` | No | Geographical longitude |
+| `org` | `string` | No | Organization name |
+| `region` | `string` | No | Region or state name |
+| `timezone` | `string` | No | Timezone identifier |
 
 ### Operations
 

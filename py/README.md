@@ -241,17 +241,17 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `as` |  |
-| `city` |  |
-| `country` |  |
-| `country_code` |  |
-| `ip` |  |
-| `isp` |  |
-| `latitude` |  |
-| `longitude` |  |
-| `org` |  |
-| `region` |  |
-| `timezone` |  |
+| `as` | Autonomous System information |
+| `city` | City name |
+| `country` | Country name |
+| `country_code` | ISO 3166-1 alpha-2 country code |
+| `ip` | The queried IP address |
+| `isp` | Internet Service Provider |
+| `latitude` | Geographical latitude |
+| `longitude` | Geographical longitude |
+| `org` | Organization name |
+| `region` | Region or state name |
+| `timezone` | Timezone identifier |
 
 Operations: Load.
 
@@ -276,17 +276,17 @@ Create an instance: `get_ip_info = client.GetIpInfo()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `as` | `str` |  |
-| `city` | `str` |  |
-| `country` | `str` |  |
-| `country_code` | `str` |  |
-| `ip` | `str` |  |
-| `isp` | `str` |  |
-| `latitude` | `float` |  |
-| `longitude` | `float` |  |
-| `org` | `str` |  |
-| `region` | `str` |  |
-| `timezone` | `str` |  |
+| `as` | `str` | Autonomous System information |
+| `city` | `str` | City name |
+| `country` | `str` | Country name |
+| `country_code` | `str` | ISO 3166-1 alpha-2 country code |
+| `ip` | `str` | The queried IP address |
+| `isp` | `str` | Internet Service Provider |
+| `latitude` | `float` | Geographical latitude |
+| `longitude` | `float` | Geographical longitude |
+| `org` | `str` | Organization name |
+| `region` | `str` | Region or state name |
+| `timezone` | `str` | Timezone identifier |
 
 #### Example: Load
 
