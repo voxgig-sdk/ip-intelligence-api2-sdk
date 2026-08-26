@@ -145,7 +145,7 @@ await entity.load({ id: 'example' })
 
 // Subsequent calls reuse the stored state
 const data = entity.data()
-console.log(data)
+console.log(data.id)
 ```
 
 ### Add custom middleware
@@ -289,6 +289,7 @@ The `prepare()` method returns:
 | `city` | City name |
 | `country` | Country name |
 | `country_code` | ISO 3166-1 alpha-2 country code |
+| `id` |  |
 | `ip` | The queried IP address |
 | `isp` | Internet Service Provider |
 | `latitude` | Geographical latitude |
@@ -324,6 +325,7 @@ Create an instance: `const get_ip_info = client.GetIpInfo()`
 | `city` | `string` | City name |
 | `country` | `string` | Country name |
 | `country_code` | `string` | ISO 3166-1 alpha-2 country code |
+| `id` | `string` |  |
 | `ip` | `string` | The queried IP address |
 | `isp` | `string` | Internet Service Provider |
 | `latitude` | `number` | Geographical latitude |

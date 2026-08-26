@@ -91,6 +91,7 @@ get_ip_info = client.GetIpInfo()
 | `city` | `str` | No | City name |
 | `country` | `str` | No | Country name |
 | `country_code` | `str` | No | ISO 3166-1 alpha-2 country code |
+| `id` | `str` | No |  |
 | `ip` | `str` | No | The queried IP address |
 | `isp` | `str` | No | Internet Service Provider |
 | `latitude` | `float` | No | Geographical latitude |

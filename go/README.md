@@ -262,6 +262,7 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 | `"city"` | City name |
 | `"country"` | Country name |
 | `"country_code"` | ISO 3166-1 alpha-2 country code |
+| `"id"` |  |
 | `"ip"` | The queried IP address |
 | `"isp"` | Internet Service Provider |
 | `"latitude"` | Geographical latitude |
@@ -297,6 +298,7 @@ Create an instance: `getIpInfo := client.GetIpInfo(nil)`
 | `city` | `string` | City name |
 | `country` | `string` | Country name |
 | `country_code` | `string` | ISO 3166-1 alpha-2 country code |
+| `id` | `string` |  |
 | `ip` | `string` | The queried IP address |
 | `isp` | `string` | Internet Service Provider |
 | `latitude` | `float64` | Geographical latitude |

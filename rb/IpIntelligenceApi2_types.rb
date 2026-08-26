@@ -22,6 +22,9 @@
 # @!attribute [rw] country_code
 #   @return [String, nil]
 #
+# @!attribute [rw] id
+#   @return [String, nil]
+#
 # @!attribute [rw] ip
 #   @return [String, nil]
 #
@@ -47,6 +50,7 @@ GetIpInfo = Struct.new(
   :city,
   :country,
   :country_code,
+  :id,
   :ip,
   :isp,
   :latitude,

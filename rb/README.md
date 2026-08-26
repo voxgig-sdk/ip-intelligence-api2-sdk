@@ -242,6 +242,7 @@ returns a result `Hash` with these keys:
 | `city` | City name |
 | `country` | Country name |
 | `country_code` | ISO 3166-1 alpha-2 country code |
+| `id` |  |
 | `ip` | The queried IP address |
 | `isp` | Internet Service Provider |
 | `latitude` | Geographical latitude |
@@ -277,6 +278,7 @@ Create an instance: `get_ip_info = client.GetIpInfo`
 | `city` | `String` | City name |
 | `country` | `String` | Country name |
 | `country_code` | `String` | ISO 3166-1 alpha-2 country code |
+| `id` | `String` |  |
 | `ip` | `String` | The queried IP address |
 | `isp` | `String` | Internet Service Provider |
 | `latitude` | `Float` | Geographical latitude |

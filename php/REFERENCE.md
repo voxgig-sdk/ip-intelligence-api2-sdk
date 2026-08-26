@@ -96,6 +96,7 @@ $get_ip_info = $client->GetIpInfo();
 | `city` | `string` | No | City name |
 | `country` | `string` | No | Country name |
 | `country_code` | `string` | No | ISO 3166-1 alpha-2 country code |
+| `id` | `string` | No |  |
 | `ip` | `string` | No | The queried IP address |
 | `isp` | `string` | No | Internet Service Provider |
 | `latitude` | `float` | No | Geographical latitude |

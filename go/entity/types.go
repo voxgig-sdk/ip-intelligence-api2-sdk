@@ -18,6 +18,7 @@ type GetIpInfo struct {
 	City *string `json:"city,omitempty"`
 	Country *string `json:"country,omitempty"`
 	CountryCode *string `json:"country_code,omitempty"`
+	Id *string `json:"id,omitempty"`
 	Ip *string `json:"ip,omitempty"`
 	Isp *string `json:"isp,omitempty"`
 	Latitude *float64 `json:"latitude,omitempty"`

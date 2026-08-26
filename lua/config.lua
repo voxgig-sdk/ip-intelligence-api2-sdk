@@ -16,6 +16,7 @@ local function make_config()
         ["options"] = {
           ["active"] = false,
         },
+        ["transport"] = "base",
       },
     },
     options = {
@@ -48,6 +49,10 @@ local function make_config()
           {
             ["name"] = "country_code",
             ["short"] = "ISO 3166-1 alpha-2 country code",
+            ["type"] = "`$STRING`",
+          },
+          {
+            ["name"] = "id",
             ["type"] = "`$STRING`",
           },
           {

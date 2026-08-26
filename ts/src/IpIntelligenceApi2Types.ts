@@ -10,6 +10,7 @@ export interface GetIpInfo {
   city?: string
   country?: string
   country_code?: string
+  id?: string
   ip?: string
   isp?: string
   latitude?: number

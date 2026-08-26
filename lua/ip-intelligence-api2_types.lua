@@ -11,6 +11,7 @@
 ---@field city? string
 ---@field country? string
 ---@field country_code? string
+---@field id? string
 ---@field ip? string
 ---@field isp? string
 ---@field latitude? number

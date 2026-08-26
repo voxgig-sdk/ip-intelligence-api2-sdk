@@ -19,6 +19,7 @@ class GetIpInfo
     public ?string $city = null;
     public ?string $country = null;
     public ?string $country_code = null;
+    public ?string $id = null;
     public ?string $ip = null;
     public ?string $isp = null;
     public ?float $latitude = null;

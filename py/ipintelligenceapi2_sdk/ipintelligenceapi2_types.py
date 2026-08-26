@@ -20,6 +20,7 @@ class GetIpInfo(TypedDict, total=False):
     city: str
     country: str
     country_code: str
+    id: str
     ip: str
     isp: str
     latitude: float

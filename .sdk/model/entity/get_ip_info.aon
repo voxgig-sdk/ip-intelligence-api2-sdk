@@ -30,6 +30,11 @@ main: kit: entity: get_ip_info: {
       type: "`$STRING`"
     }
     {
+      name: "id"
+      req: false
+      type: "`$STRING`"
+    }
+    {
       name: "ip"
       req: false
       short: "The queried IP address"
@@ -72,6 +77,11 @@ main: kit: entity: get_ip_info: {
       type: "`$STRING`"
     }
   ]
+
+  id: {
+    field: "id"
+    name: "id"
+  }
 
   name: "get_ip_info"
   op: {
