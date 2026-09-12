@@ -66,11 +66,13 @@ local function make_config()
             ["type"] = "`$STRING`",
           },
           {
+            ["format"] = "double",
             ["name"] = "latitude",
             ["short"] = "Geographical latitude",
             ["type"] = "`$NUMBER`",
           },
           {
+            ["format"] = "double",
             ["name"] = "longitude",
             ["short"] = "Geographical longitude",
             ["type"] = "`$NUMBER`",
@@ -90,6 +92,10 @@ local function make_config()
             ["short"] = "Timezone identifier",
             ["type"] = "`$STRING`",
           },
+        },
+        ["id"] = {
+          ["field"] = "id",
+          ["name"] = "id",
         },
         ["name"] = "get_ip_info",
         ["op"] = {
@@ -113,12 +119,14 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/{ip}",
-                ["parts"] = {
-                  "{id}",
-                },
                 ["rename"] = {
                   ["param"] = {
                     ["ip"] = "id",
+                  },
+                },
+                ["segments"] = {
+                  {
+                    ["var"] = "id",
                   },
                 },
                 ["select"] = {
@@ -129,6 +137,9 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "{id}",
                 },
               },
             },

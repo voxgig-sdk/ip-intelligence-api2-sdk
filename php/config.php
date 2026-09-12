@@ -92,11 +92,13 @@ class IpIntelligenceApi2Config
               'type' => '`$STRING`',
             ],
             [
+              'format' => 'double',
               'name' => 'latitude',
               'short' => 'Geographical latitude',
               'type' => '`$NUMBER`',
             ],
             [
+              'format' => 'double',
               'name' => 'longitude',
               'short' => 'Geographical longitude',
               'type' => '`$NUMBER`',
@@ -116,6 +118,10 @@ class IpIntelligenceApi2Config
               'short' => 'Timezone identifier',
               'type' => '`$STRING`',
             ],
+          ],
+          'id' => [
+            'field' => 'id',
+            'name' => 'id',
           ],
           'name' => 'get_ip_info',
           'op' => [
@@ -139,12 +145,14 @@ class IpIntelligenceApi2Config
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/{ip}',
-                  'parts' => [
-                    '{id}',
-                  ],
                   'rename' => [
                     'param' => [
                       'ip' => 'id',
+                    ],
+                  ],
+                  'segments' => [
+                    [
+                      'var' => 'id',
                     ],
                   ],
                   'select' => [
@@ -155,6 +163,9 @@ class IpIntelligenceApi2Config
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    '{id}',
                   ],
                 ],
               ],

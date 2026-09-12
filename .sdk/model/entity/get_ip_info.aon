@@ -47,12 +47,14 @@ main: kit: entity: get_ip_info: {
       type: "`$STRING`"
     }
     {
+      format: "double"
       name: "latitude"
       req: false
       short: "Geographical latitude"
       type: "`$NUMBER`"
     }
     {
+      format: "double"
       name: "longitude"
       req: false
       short: "Geographical longitude"
@@ -103,14 +105,16 @@ main: kit: entity: get_ip_info: {
           }
           method: "GET"
           orig: "/{ip}"
-          parts: [
-            "{id}"
-          ]
           rename: {
             param: {
               ip: "id"
             }
           }
+          segments: [
+            {
+              var: "id"
+            }
+          ]
           select: {
             exist: [
               "id"
