@@ -105,7 +105,7 @@ local result, err = client:GetIpInfo():load({ id = "test01" })
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/ip-intelligence-api2` | publish pending — [install from git tag](https://github.com/voxgig-sdk/ip-intelligence-api2-sdk/releases) |
+| TypeScript | `@voxgig-sdk/ip-intelligence-api2-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/ip-intelligence-api2-sdk/releases) |
 | Python | `voxgig-sdk-ip-intelligence-api2` | publish pending — [install from git tag](https://github.com/voxgig-sdk/ip-intelligence-api2-sdk/releases) |
 | PHP | `voxgig-sdk/ip-intelligence-api2` | publish pending — [install from git tag](https://github.com/voxgig-sdk/ip-intelligence-api2-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/ip-intelligence-api2-sdk/go` | `go get github.com/voxgig-sdk/ip-intelligence-api2-sdk/go@latest` |
@@ -119,7 +119,7 @@ local result, err = client:GetIpInfo():load({ id = "test01" })
 ### TypeScript
 
 ```ts
-import { IpIntelligenceApi2SDK } from '@voxgig-sdk/ip-intelligence-api2'
+import { IpIntelligenceApi2SDK } from '@voxgig-sdk/ip-intelligence-api2-sdk'
 
 const client = new IpIntelligenceApi2SDK()
 

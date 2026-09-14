@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { IpIntelligenceApi2SDK } from '@voxgig-sdk/ip-intelligence-api2'
+import { IpIntelligenceApi2SDK } from '@voxgig-sdk/ip-intelligence-api2-sdk'
 
 const client = new IpIntelligenceApi2SDK()
 ```
@@ -423,7 +423,7 @@ ip-intelligence-api2/
 Import the SDK from the package root:
 
 ```ts
-import { IpIntelligenceApi2SDK } from '@voxgig-sdk/ip-intelligence-api2'
+import { IpIntelligenceApi2SDK } from '@voxgig-sdk/ip-intelligence-api2-sdk'
 ```
 
 ### Entity state
