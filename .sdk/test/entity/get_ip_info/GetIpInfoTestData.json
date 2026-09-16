@@ -61,5 +61,162 @@
         "timezone": "s1eb"
       }
     }
+  },
+  "requests": {
+    "GET /{ip}": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getIpInfo",
+        "parameters": [
+          {
+            "description": "The IP address to query (IPv4 or IPv6)",
+            "in": "path",
+            "name": "ip",
+            "required": true,
+            "schema": {
+              "example": "1.1.1.1",
+              "type": "string"
+            }
+          }
+        ],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "as": {
+                      "description": "Autonomous System information",
+                      "example": "AS13335 Cloudflare, Inc.",
+                      "type": "string"
+                    },
+                    "city": {
+                      "description": "City name",
+                      "example": "Sydney",
+                      "type": "string"
+                    },
+                    "country": {
+                      "description": "Country name",
+                      "example": "Australia",
+                      "type": "string"
+                    },
+                    "country_code": {
+                      "description": "ISO 3166-1 alpha-2 country code",
+                      "example": "AU",
+                      "type": "string"
+                    },
+                    "ip": {
+                      "description": "The queried IP address",
+                      "example": "1.1.1.1",
+                      "type": "string"
+                    },
+                    "isp": {
+                      "description": "Internet Service Provider",
+                      "example": "Cloudflare, Inc.",
+                      "type": "string"
+                    },
+                    "latitude": {
+                      "description": "Geographical latitude",
+                      "example": -33.8688,
+                      "format": "double",
+                      "type": "number"
+                    },
+                    "longitude": {
+                      "description": "Geographical longitude",
+                      "example": 151.2093,
+                      "format": "double",
+                      "type": "number"
+                    },
+                    "org": {
+                      "description": "Organization name",
+                      "example": "APNIC and Cloudflare DNS Resolver project",
+                      "type": "string"
+                    },
+                    "region": {
+                      "description": "Region or state name",
+                      "example": "New South Wales",
+                      "type": "string"
+                    },
+                    "timezone": {
+                      "description": "Timezone identifier",
+                      "example": "Australia/Sydney",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful response with IP information"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "example": "Invalid IP address format",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Bad request - Invalid IP address format"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "example": "IP address not found",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "IP address not found or no data available"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "example": "Rate limit exceeded",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Rate limit exceeded"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "example": "Internal server error",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
+      }
+    }
   }
 }

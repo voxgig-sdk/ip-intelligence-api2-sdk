@@ -1,12 +1,18 @@
 # IpIntelligenceApi2 SDK feature factory
 
 from ipintelligenceapi2_sdk.feature.base_feature import IpIntelligenceApi2BaseFeature
+from ipintelligenceapi2_sdk.feature.ratelimit_feature import IpIntelligenceApi2RatelimitFeature
+from ipintelligenceapi2_sdk.feature.retry_feature import IpIntelligenceApi2RetryFeature
 from ipintelligenceapi2_sdk.feature.test_feature import IpIntelligenceApi2TestFeature
+from ipintelligenceapi2_sdk.feature.timeout_feature import IpIntelligenceApi2TimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: IpIntelligenceApi2BaseFeature(),
+    "ratelimit": lambda: IpIntelligenceApi2RatelimitFeature(),
+    "retry": lambda: IpIntelligenceApi2RetryFeature(),
     "test": lambda: IpIntelligenceApi2TestFeature(),
+    "timeout": lambda: IpIntelligenceApi2TimeoutFeature(),
 }
 
 
