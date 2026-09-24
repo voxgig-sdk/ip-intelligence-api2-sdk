@@ -91,64 +91,76 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "as",
-						"short": "Autonomous System information",
+						"title": "As",
 						"type": "`$STRING`",
+						"short": "Autonomous System information",
 					},
 					map[string]any{
 						"name": "city",
-						"short": "City name",
+						"title": "City",
 						"type": "`$STRING`",
+						"short": "City name",
 					},
 					map[string]any{
 						"name": "country",
-						"short": "Country name",
+						"title": "Country",
 						"type": "`$STRING`",
+						"short": "Country name",
 					},
 					map[string]any{
 						"name": "country_code",
-						"short": "ISO 3166-1 alpha-2 country code",
+						"title": "Country Code",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 alpha-2 country code",
 					},
 					map[string]any{
 						"name": "id",
+						"title": "Id",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "ip",
-						"short": "The queried IP address",
+						"title": "Ip",
 						"type": "`$STRING`",
+						"short": "The queried IP address",
 					},
 					map[string]any{
 						"name": "isp",
-						"short": "Internet Service Provider",
+						"title": "Isp",
 						"type": "`$STRING`",
+						"short": "Internet Service Provider",
 					},
 					map[string]any{
-						"format": "double",
 						"name": "latitude",
-						"short": "Geographical latitude",
+						"title": "Latitude",
 						"type": "`$NUMBER`",
+						"short": "Geographical latitude",
+						"format": "double",
 					},
 					map[string]any{
-						"format": "double",
 						"name": "longitude",
-						"short": "Geographical longitude",
+						"title": "Longitude",
 						"type": "`$NUMBER`",
+						"short": "Geographical longitude",
+						"format": "double",
 					},
 					map[string]any{
 						"name": "org",
-						"short": "Organization name",
+						"title": "Org",
 						"type": "`$STRING`",
+						"short": "Organization name",
 					},
 					map[string]any{
 						"name": "region",
-						"short": "Region or state name",
+						"title": "Region",
 						"type": "`$STRING`",
+						"short": "Region or state name",
 					},
 					map[string]any{
 						"name": "timezone",
-						"short": "Timezone identifier",
+						"title": "Timezone",
 						"type": "`$STRING`",
+						"short": "Timezone identifier",
 					},
 				},
 				"id": map[string]any{
@@ -162,42 +174,42 @@ func MakeConfig() map[string]any {
 						"name": "load",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{
-									"params": []any{
-										map[string]any{
-											"example": "1.1.1.1",
-											"kind": "param",
-											"name": "id",
-											"orig": "ip",
-											"reqd": true,
-											"type": "`$STRING`",
-										},
-									},
-								},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/{ip}",
-								"rename": map[string]any{
-									"param": map[string]any{
-										"ip": "id",
-									},
-								},
 								"segments": []any{
 									map[string]any{
 										"var": "id",
 									},
 								},
-								"select": map[string]any{
-									"exist": []any{
-										"id",
+								"parts": []any{
+									"{id}",
+								},
+								"rename": map[string]any{
+									"param": map[string]any{
+										"ip": "id",
 									},
 								},
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body`",
 								},
-								"parts": []any{
-									"{id}",
+								"args": map[string]any{
+									"params": []any{
+										map[string]any{
+											"name": "id",
+											"orig": "ip",
+											"type": "`$STRING`",
+											"kind": "param",
+											"reqd": true,
+											"example": "1.1.1.1",
+										},
+									},
+								},
+								"select": map[string]any{
+									"exist": []any{
+										"id",
+									},
 								},
 							},
 						},

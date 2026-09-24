@@ -11,19 +11,12 @@ const FEATURE_CLASS = {
     test: TestFeature_1.TestFeature,
     timeout: TimeoutFeature_1.TimeoutFeature,
 };
-// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
-// the model's active plugin groups. A feature that takes a `plugins` option
-// (secrets over sekreto) reads its own entry; a feature with no plugins has
-// none. Named imports above make each definition statically reachable, so
-// an SDK carries exactly the plugin modules its model selects — the same
-// leanness the old side-effect registry imports bought, without a registry.
 const FEATURE_PLUGINS = {};
 exports.FEATURE_PLUGINS = FEATURE_PLUGINS;
 class Config {
     makeFeature(fn) {
         const fc = FEATURE_CLASS[fn];
         const fi = new fc();
-        // TODO: errors etc
         return fi;
     }
     // False for a feature added at runtime via options.extend (station's
@@ -114,64 +107,76 @@ class Config {
             "fields": [
                 {
                     "name": "as",
-                    "short": "Autonomous System information",
-                    "type": "`$STRING`"
+                    "title": "As",
+                    "type": "`$STRING`",
+                    "short": "Autonomous System information"
                 },
                 {
                     "name": "city",
-                    "short": "City name",
-                    "type": "`$STRING`"
+                    "title": "City",
+                    "type": "`$STRING`",
+                    "short": "City name"
                 },
                 {
                     "name": "country",
-                    "short": "Country name",
-                    "type": "`$STRING`"
+                    "title": "Country",
+                    "type": "`$STRING`",
+                    "short": "Country name"
                 },
                 {
                     "name": "country_code",
-                    "short": "ISO 3166-1 alpha-2 country code",
-                    "type": "`$STRING`"
+                    "title": "Country Code",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 alpha-2 country code"
                 },
                 {
                     "name": "id",
+                    "title": "Id",
                     "type": "`$STRING`"
                 },
                 {
                     "name": "ip",
-                    "short": "The queried IP address",
-                    "type": "`$STRING`"
+                    "title": "Ip",
+                    "type": "`$STRING`",
+                    "short": "The queried IP address"
                 },
                 {
                     "name": "isp",
-                    "short": "Internet Service Provider",
-                    "type": "`$STRING`"
+                    "title": "Isp",
+                    "type": "`$STRING`",
+                    "short": "Internet Service Provider"
                 },
                 {
-                    "format": "double",
                     "name": "latitude",
+                    "title": "Latitude",
+                    "type": "`$NUMBER`",
                     "short": "Geographical latitude",
-                    "type": "`$NUMBER`"
+                    "format": "double"
                 },
                 {
-                    "format": "double",
                     "name": "longitude",
+                    "title": "Longitude",
+                    "type": "`$NUMBER`",
                     "short": "Geographical longitude",
-                    "type": "`$NUMBER`"
+                    "format": "double"
                 },
                 {
                     "name": "org",
-                    "short": "Organization name",
-                    "type": "`$STRING`"
+                    "title": "Org",
+                    "type": "`$STRING`",
+                    "short": "Organization name"
                 },
                 {
                     "name": "region",
-                    "short": "Region or state name",
-                    "type": "`$STRING`"
+                    "title": "Region",
+                    "type": "`$STRING`",
+                    "short": "Region or state name"
                 },
                 {
                     "name": "timezone",
-                    "short": "Timezone identifier",
-                    "type": "`$STRING`"
+                    "title": "Timezone",
+                    "type": "`$STRING`",
+                    "short": "Timezone identifier"
                 }
             ],
             "id": {
@@ -185,43 +190,43 @@ class Config {
                     "name": "load",
                     "points": [
                         {
-                            "args": {
-                                "params": [
-                                    {
-                                        "example": "1.1.1.1",
-                                        "kind": "param",
-                                        "name": "id",
-                                        "orig": "ip",
-                                        "reqd": true,
-                                        "type": "`$STRING`"
-                                    }
-                                ]
-                            },
                             "kind": "http",
                             "method": "GET",
                             "orig": "/{ip}",
-                            "rename": {
-                                "param": {
-                                    "ip": "id"
-                                }
-                            },
                             "segments": [
                                 {
                                     "var": "id"
                                 }
                             ],
-                            "select": {
-                                "exist": [
-                                    "id"
-                                ]
+                            "parts": [
+                                "{id}"
+                            ],
+                            "rename": {
+                                "param": {
+                                    "ip": "id"
+                                }
                             },
                             "transform": {
                                 "req": "`reqdata`",
                                 "res": "`body`"
                             },
-                            "parts": [
-                                "{id}"
-                            ]
+                            "args": {
+                                "params": [
+                                    {
+                                        "name": "id",
+                                        "orig": "ip",
+                                        "type": "`$STRING`",
+                                        "kind": "param",
+                                        "reqd": true,
+                                        "example": "1.1.1.1"
+                                    }
+                                ]
+                            },
+                            "select": {
+                                "exist": [
+                                    "id"
+                                ]
+                            }
                         }
                     ]
                 }

@@ -99,64 +99,76 @@ module IpIntelligenceApi2Config
           "fields" => [
             {
               "name" => "as",
-              "short" => "Autonomous System information",
+              "title" => "As",
               "type" => "`$STRING`",
+              "short" => "Autonomous System information",
             },
             {
               "name" => "city",
-              "short" => "City name",
+              "title" => "City",
               "type" => "`$STRING`",
+              "short" => "City name",
             },
             {
               "name" => "country",
-              "short" => "Country name",
+              "title" => "Country",
               "type" => "`$STRING`",
+              "short" => "Country name",
             },
             {
               "name" => "country_code",
-              "short" => "ISO 3166-1 alpha-2 country code",
+              "title" => "Country Code",
               "type" => "`$STRING`",
+              "short" => "ISO 3166-1 alpha-2 country code",
             },
             {
               "name" => "id",
+              "title" => "Id",
               "type" => "`$STRING`",
             },
             {
               "name" => "ip",
-              "short" => "The queried IP address",
+              "title" => "Ip",
               "type" => "`$STRING`",
+              "short" => "The queried IP address",
             },
             {
               "name" => "isp",
-              "short" => "Internet Service Provider",
+              "title" => "Isp",
               "type" => "`$STRING`",
+              "short" => "Internet Service Provider",
             },
             {
-              "format" => "double",
               "name" => "latitude",
-              "short" => "Geographical latitude",
+              "title" => "Latitude",
               "type" => "`$NUMBER`",
+              "short" => "Geographical latitude",
+              "format" => "double",
             },
             {
-              "format" => "double",
               "name" => "longitude",
-              "short" => "Geographical longitude",
+              "title" => "Longitude",
               "type" => "`$NUMBER`",
+              "short" => "Geographical longitude",
+              "format" => "double",
             },
             {
               "name" => "org",
-              "short" => "Organization name",
+              "title" => "Org",
               "type" => "`$STRING`",
+              "short" => "Organization name",
             },
             {
               "name" => "region",
-              "short" => "Region or state name",
+              "title" => "Region",
               "type" => "`$STRING`",
+              "short" => "Region or state name",
             },
             {
               "name" => "timezone",
-              "short" => "Timezone identifier",
+              "title" => "Timezone",
               "type" => "`$STRING`",
+              "short" => "Timezone identifier",
             },
           ],
           "id" => {
@@ -170,43 +182,43 @@ module IpIntelligenceApi2Config
               "name" => "load",
               "points" => [
                 {
-                  "args" => {
-                    "params" => [
-                      {
-                        "example" => "1.1.1.1",
-                        "kind" => "param",
-                        "name" => "id",
-                        "orig" => "ip",
-                        "reqd" => true,
-                        "type" => "`$STRING`",
-                      },
-                    ],
-                  },
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/{ip}",
-                  "rename" => {
-                    "param" => {
-                      "ip" => "id",
-                    },
-                  },
                   "segments" => [
                     {
                       "var" => "id",
                     },
                   ],
-                  "select" => {
-                    "exist" => [
-                      "id",
-                    ],
+                  "parts" => [
+                    "{id}",
+                  ],
+                  "rename" => {
+                    "param" => {
+                      "ip" => "id",
+                    },
                   },
                   "transform" => {
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
-                  "parts" => [
-                    "{id}",
-                  ],
+                  "args" => {
+                    "params" => [
+                      {
+                        "name" => "id",
+                        "orig" => "ip",
+                        "type" => "`$STRING`",
+                        "kind" => "param",
+                        "reqd" => true,
+                        "example" => "1.1.1.1",
+                      },
+                    ],
+                  },
+                  "select" => {
+                    "exist" => [
+                      "id",
+                    ],
+                  },
                 },
               ],
             },
